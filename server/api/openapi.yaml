@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  license:
+    name: MIT
+  title: oas3_go_flutter_exam Employee
+  version: 1.0.0
+servers:
+- url: http://localhost:8080/api/
+paths:
+  /employee:
+    get:
+      operationId: getEmployee
+      parameters:
+      - description: query target employee id
+        explode: true
+        in: query
+        name: employeeId
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+          description: return employee information
+      summary: get employee information
+      tags:
+      - employee
+components:
+  schemas:
+    Employee:
+      example:
+        firstName: firstName
+        lastName: lastName
+        id: id
+        salary: 0
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        salary:
+          format: int64
+          type: integer
+      required:
+      - firstName
+      - id
+      - lastName
+      - salary
