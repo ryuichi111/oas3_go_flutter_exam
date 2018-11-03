@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'Flutter with OpenAPI Generator'),
     );
   }
 }
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text('pleas input employee id'),
+            new Text('please input employee id'),
             new TextField(
               onChanged: (v) => this._employeeId = v,
             ),
