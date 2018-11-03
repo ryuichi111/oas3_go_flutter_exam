@@ -31,14 +31,12 @@ class _MyHomePageState extends State<MyHomePage> {
   String _employeeName = '';
   String _employeeId = '';
 
-  void _callWebApi() {
-    setState(() {
-      var client = new EmployeeApi();
-      var result = client.getEmployee(this._employeeId);
-      result.then(
-        (employee) => this._employeeName = employee.firstName + ' ' + employee.lastName
-      );
-    });
+  void _callWebApi() {    
+    var client = new EmployeeApi();
+    var result = client.getEmployee(this._employeeId);
+    result.then(
+      (employee) => setState(() { this._employeeName = employee.firstName + ' ' + employee.lastName; } )
+    );
   }
 
   @override
