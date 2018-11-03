@@ -16,42 +16,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-/*
-class MyPage extends StatelessWidget {
-
-  MyPage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(this.title),
-      ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new RaisedButton(
-              child: new Text("Call WebAPI"),
-              onPressed: callWebApi(),
-            ),
-            new Text(
-              '',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void callWebApi() {
-
-  }
-}
-*/
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
